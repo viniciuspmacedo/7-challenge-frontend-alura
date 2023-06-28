@@ -1,0 +1,12 @@
+@import '../_abstract/variables';
+
+.footer{
+    background-color: $black;
+    text-align: center;
+    padding: 1.125rem 1.5rem;
+
+    .footer-text{
+        font-size: 13px;
+        color: $white;
+    }
+}

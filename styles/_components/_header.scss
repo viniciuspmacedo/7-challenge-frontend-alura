@@ -2,7 +2,7 @@
 @import '../_abstract/media-queries';
 
 .header {
-    
+
 
     .header-container {
         background-color: $black;
@@ -15,16 +15,23 @@
         #menu {
             display: none;
             position: fixed;
-            top: 50px;
+            top: 0px;
             right: 0;
             background-color: $light-black;
-            padding: 1.5rem;
+            padding: 0.75rem 1rem;
+            height: 180px;
+
+            transition-property: display;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.1s;
 
             ul {
+                margin-top: 40px;
                 list-style: none;
                 padding: 0 24px;
 
-                @include medium-screen{
+                @include medium-screen {
                     padding: 0;
                     display: flex;
                     gap: 0.5rem;
@@ -59,13 +66,16 @@
                 margin-left: 10px;
                 position: static;
                 padding: 0;
-                background-color: $black; 
+                background-color: $black;
             }
         }
 
         .menu-icon {
             color: $yellow;
             display: inline-block;
+            font-size: 2rem;
+            text-align: center;
+            z-index: 1;
 
             @include medium-screen {
                 display: none;

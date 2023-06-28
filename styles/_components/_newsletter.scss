@@ -1,0 +1,65 @@
+@import '../_abstract/variables';
+@import '../_abstract/media-queries';
+
+.newsletter {
+    background-color: $white;
+    padding: 1.5rem;
+
+    @include medium-screen {
+        max-width: 690px;
+        margin: 1.5rem auto;
+    }
+
+    @include large-screen {
+        margin: 3rem auto;
+        max-width: 730px;
+    }
+
+    .newsletter-container {
+        border: 1px solid $black;
+        padding: 1.5rem;
+
+        @include medium-screen {
+            padding: 2.5rem;
+        }
+
+        .newsletter-text {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            line-height: 1.5rem;
+
+            @include medium-screen {
+                font-size: 20px;
+            }
+        }
+
+        .newsletter-form{
+            text-align: center;
+            border: 1px solid $black;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            @include medium-screen {
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            input{              
+                padding: 0 1rem;
+                border: none;
+                margin: 0;
+                height: 2.5rem;
+                left: 0px;
+            }
+
+            button {                
+                right: 0;
+                height: 2.5rem;
+                border: none;
+                background-color: $purple;
+                color: $white;
+                font-weight: 500;
+            }
+        }
+    }
+}
