@@ -1,0 +1,113 @@
+@import '../_abstract/variables';
+@import '../_abstract/media-queries';
+
+.categories {
+    margin: 24px 24px;
+    text-align: center;
+
+    @include medium-screen {
+        margin: 40px 40px;
+    }
+
+    @include large-screen {
+        margin: 72px 160px 48px 160px;
+    }
+
+    .categories-container {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 30px;
+
+
+        @include medium-screen {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        @include large-screen {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .categorie-card {
+            width: 146px;
+
+            @include medium-screen {
+                width: 210px;
+            }
+
+            @include large-screen {
+                width: 160px;
+            }
+        }
+
+        p {
+            background-color: $black;
+            color: $white;
+            font-weight: 500;
+            margin: 0;
+            padding: 8px 0;
+        }
+
+        .img-camisetas {
+            @include medium-screen {
+                content: url("../assets/tablet/Categorias/categoria-camiseta.png");
+            }
+
+            @include large-screen {
+                content: url("../assets/desktop/Categorias/categoria-camiseta.png");
+            }
+        }
+
+        .img-bolsas {
+            @include medium-screen {
+                content: url("../assets/tablet/Categorias/categoria-bolsas.png");
+            }
+
+            @include large-screen {
+                content: url("../assets/desktop/Categorias/categoria-bolsas.png");
+            }
+        }
+
+        .img-calcados {
+            @include medium-screen {
+                content: url("../assets/tablet/Categorias/categoria-calcados.png");
+            }
+
+            @include large-screen {
+                content: url("../assets/desktop/Categorias/categoria-calcados.png");
+            }
+        }
+
+        .img-calcas {
+            @include medium-screen {
+                content: url("../assets/tablet/Categorias/categoria-calcas.png");
+            }
+
+            @include large-screen {
+                content: url("../assets/desktop/Categorias/categoria-calcas.png");
+            }
+        }
+
+        .img-casacos {
+            @include medium-screen {
+                content: url("../assets/tablet/Categorias/categoria-casacos.png");
+            }
+
+            @include large-screen {
+                content: url("../assets/desktop/Categorias/categoria-casacos.png");
+            }
+        }
+
+        .img-oculos {
+            @include medium-screen {
+                content: url("../assets/tablet/Categorias/categoria-oculos.png");
+            }
+
+            @include large-screen {
+                content: url("../assets/desktop/Categorias/categoria-oculos.png");
+            }
+        }
+    }
+}

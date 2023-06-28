@@ -1,0 +1,18 @@
+@import '../_abstract/media-queries';
+
+.banner {
+    .banner-container {
+        box-sizing: border-box;
+        text-align: center;
+        #img-banner-1 {
+            @include medium-screen {
+                content: url("/assets/tablet/banner-carousel-1-768.png");
+            }
+
+            @include large-screen{
+                content: url("/assets/desktop/banner-carousel-1-1440.png");
+            }
+
+        }
+    }
+}

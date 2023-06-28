@@ -1,0 +1,99 @@
+@import '../_abstract/variables';
+@import '../_abstract/media-queries';
+
+.facilities {
+    background-color: $black;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    @include large-screen{
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .title {
+        color: $white;
+        font-size: 1.5rem;
+
+        @include large-screen{
+            font-size: 2rem;
+        }
+    }
+
+    .facilities-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+
+        @include large-screen{
+            flex-direction: row;
+        }
+
+        .facility-item {
+            display: grid;
+            column-gap: 24px;
+            row-gap: 16px;
+            max-width: 302px;
+
+            img {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                grid-column-end: 2;
+                grid-row-end: 3;
+                align-self: center;
+            }
+
+            .facility-title {
+                color: $yellow;
+                font-weight: 700;
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+
+            .faciliity-text {
+                color: $white;
+                grid-column-start: 2;
+                grid-row-start: 2;
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            #imagem-pix {
+                @include medium-screen {
+                    content: url("../assets/tablet/icones/x-diamond.png");
+                }
+
+                @include large-screen {
+                    content: url("../assets/desktop/icones/x-diamond.png");
+                }
+            }
+
+            #imagem-troca {
+                @include medium-screen {
+                    content: url("../assets/tablet/icones/arrow-repeat.png");
+                }
+
+                @include large-screen {
+                    content: url("../assets/desktop/icones/arrow-repeat.png");
+                }
+            }
+
+            #imagem-sustentabilidade {
+                @include medium-screen {
+                    content: url("../assets/tablet/icones/flower1.png");
+                }
+
+                @include large-screen {
+                    content: url("../assets/desktop/icones/flower1.png");
+                }
+            }
+
+
+        }
+    }
+}
