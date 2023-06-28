@@ -21,17 +21,13 @@
             padding: 0.75rem 1rem;
             height: 180px;
 
-            transition-property: display;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-in-out;
-            transition-delay: 0.1s;
-
             ul {
                 margin-top: 40px;
                 list-style: none;
                 padding: 0 24px;
 
                 @include medium-screen {
+                    margin: 0;
                     padding: 0;
                     display: flex;
                     gap: 0.5rem;
@@ -59,6 +55,7 @@
                 position: static;
                 padding: 0;
                 background-color: $black;
+                height: 100%;
             }
 
             @include large-screen {
