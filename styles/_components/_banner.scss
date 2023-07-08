@@ -1,18 +1,94 @@
 @import '../_abstract/media-queries';
 
 .banner {
-    .banner-container {
-        box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .slide {
         text-align: center;
-        #img-banner-1 {
-            @include medium-screen {
-                content: url("/assets/tablet/banner-carousel-1-768.png");
+        width: 100%;
+        display: none;
+    }
+
+    #banner-img-1 {
+        width: 100%;
+
+        @include medium-screen {
+            content: url("/assets/tablet/banner-carousel-1-768.png");
+        }
+
+        @include large-screen {
+            content: url("/assets/desktop/banner-carousel-1-1440.png");
+        }
+
+    }
+
+    #banner-img-2 {
+        width: 100%;
+
+        @include medium-screen {
+            content: url("/assets/tablet/banner-carousel-2-768.png");
+        }
+
+        @include large-screen {
+            content: url("/assets/desktop/banner-carousel-2-1440.png");
+        }
+
+    }
+
+    #banner-img-3 {
+        width: 100%;
+
+        @include medium-screen {
+            content: url("/assets/tablet/banner-carousel-3-768.png");
+        }
+
+        @include large-screen {
+            content: url("/assets/desktop/banner-carousel-3-1440.png");
+        }
+
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            color: $white;
+            font-size: 72px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        z-index: 1;
+        position: absolute;
+        bottom: 10px;
+        left: calc(50% - 90px); 
+
+        .indicator {
+            display: inline-block;
+            width: 60px;
+            height: 6px;
+            background-color: gray;
+            margin: 0 5px;
+
+            &:hover{
+                cursor: pointer;
             }
 
-            @include large-screen{
-                content: url("/assets/desktop/banner-carousel-1-1440.png");
+            &.active{
+                background-color: $white
             }
-
         }
     }
 }

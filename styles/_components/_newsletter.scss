@@ -15,51 +15,55 @@
         max-width: 730px;
     }
 
-    .newsletter-container {
+    &__container {
         border: 1px solid $black;
         padding: 1.5rem;
 
         @include medium-screen {
             padding: 2.5rem;
         }
+    }
 
-        .newsletter-text {
-            margin-bottom: 1.5rem;
-            text-align: center;
-            line-height: 1.5rem;
+    &__text {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        line-height: 1.5rem;
 
-            @include medium-screen {
-                font-size: 20px;
-            }
-        }
-
-        .newsletter-form{
-            text-align: center;
-            border: 1px solid $black;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-
-            @include medium-screen {
-                width: 80%;
-                margin: 0 auto;
-            }
-            
-            input{              
-                padding: 0 1rem;
-                border: none;
-                margin: 0;
-                height: 2.5rem;
-                left: 0px;
-            }
-
-            button {                
-                right: 0;
-                height: 2.5rem;
-                border: none;
-                background-color: $purple;
-                color: $white;
-                font-weight: 500;
-            }
+        @include medium-screen {
+            font-size: 20px;
         }
     }
+
+    &__form {
+        position: relative;
+        text-align: center;
+        border: 1px solid $black;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        @include medium-screen {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        input {
+            padding: 0 1rem;
+            border: none;
+            margin: 0;
+            height: 2.5rem;
+            left: 0px;
+        }
+
+        .send {
+            width: 84px;
+            position: absolute;
+            right: 0px;
+            height: 2.5rem;
+            border: none;
+            background-color: $purple;
+            color: $white;
+            font-weight: 500;
+        }
+    }
+
 }
