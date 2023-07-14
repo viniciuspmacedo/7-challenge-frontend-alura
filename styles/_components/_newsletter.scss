@@ -52,6 +52,10 @@
             margin: 0;
             height: 2.5rem;
             left: 0px;
+
+            &:focus-visible {
+                outline: none;
+            }
         }
 
         .send {
@@ -66,4 +70,54 @@
         }
     }
 
+    .invalid-email {
+        position: relative;
+        margin-top: 8px;
+        font-weight: 700;
+        font-size: 13px;
+        color: red;
+
+        @include medium-screen {
+            left: 60px;
+        }
+    }
+
+    &__modal {
+
+        border: none;
+        padding: 0;
+
+        @include medium-screen {
+            width: 700px;
+        }
+
+        .modal {
+
+            &__top {
+                padding: 18px 16px;
+                background-color: $black;
+                color: $white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+
+            &__icon {
+                color: $yellow;
+            }
+
+            &__text {
+                padding: 16px 16px 32px 16px;
+            }
+
+            &__close {
+                color: #6C757D;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

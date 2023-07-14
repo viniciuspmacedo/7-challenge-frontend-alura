@@ -1,9 +1,23 @@
+const buttons = document.querySelectorAll("button");
+const buttonCloseModal = document.querySelectorAll('.modal__close');
+const modal = document.querySelector('.modal');
 
-export function openModal(elementId) {
-    const modal = document.querySelector(`#${elementId}`)
-    modal.style.display = 'block';
+window.onclick = function (event) {
+
+    if (event.target == document.getElementById("products-modal") ||
+        event.target == document.getElementById("newsletter-modal")) {
+        closeModal(event.target);
+    }
 }
 
-export function closeModal(element) {
-    element.style.display = 'none';
+function openModal(content) {
+    const modal = document.querySelector(`.modal`)
+    modal.appendChild(content)
+    modal.style.display = 'block';
+    console.log('teste', (modal.childNodes))
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+    modal.removeChild(modal.firstElementChild);
 }

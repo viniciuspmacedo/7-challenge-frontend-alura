@@ -16,7 +16,7 @@ for (let i = 0; i < slides.length; i++) {
 }
 
 // Adiciona a classe 'active' ao indicador do slide atual
-var indicators = indicatorsContainer.getElementsByClassName('indicator');
+const indicators = indicatorsContainer.getElementsByClassName('indicator');
 indicators[currentSlide].classList.add('active');
 
 /* inicia o banner com a primeira imagem carregada */
@@ -24,13 +24,13 @@ slides[currentSlide].style.display = 'block'
 
 // Função para exibir o próximo slide
 function nextSlide() {
-    var nextSlideIndex = (currentSlide + 1) % slides.length;
+    let nextSlideIndex = (currentSlide + 1) % slides.length;
     goToSlide(nextSlideIndex);
 }
 
 // Função para exibir o slide anterior
 function previousSlide() {
-    var previousSlideIndex = (currentSlide - 1 + slides.length) % slides.length;
+    let previousSlideIndex = (currentSlide - 1 + slides.length) % slides.length;
     goToSlide(previousSlideIndex);
 }
 
@@ -50,4 +50,3 @@ function goToSlide(index) {
 
 nextControl.setAttribute('onclick', 'nextSlide()')
 previousControl.setAttribute('onclick', 'previousSlide()')
-

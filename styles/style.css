@@ -12,8 +12,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 html, body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -42,6 +40,7 @@ h2 {
   box-sizing: border-box;
 }
 .header .header-container #menu {
+  z-index: 3;
   display: none;
   position: fixed;
   top: 0px;
@@ -100,7 +99,7 @@ h2 {
   display: inline-block;
   font-size: 2rem;
   text-align: center;
-  z-index: 1;
+  z-index: 4;
 }
 @media screen and (min-width: 768px) {
   .header .header-container .menu-icon {
@@ -420,6 +419,117 @@ h2 {
   border: none;
   font-weight: 500;
 }
+.products__modal {
+  padding: 0;
+  border: none;
+  max-width: 700px;
+}
+.products__modal .modal__content form {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.products__modal .modal__content form fieldset {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.products__modal .modal__content form fieldset legend {
+  padding: 16px 0;
+  font-weight: 700;
+  grid-area: legend;
+}
+.products__modal .modal__content form fieldset div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.products__modal .modal__content form fieldset input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #CCCCCC;
+  border-radius: 50%;
+}
+.products__modal .modal__content form fieldset input[type=radio]:checked {
+  outline: #9343FF solid 3px;
+  outline-offset: -3px;
+}
+.products__modal .modal__content form button {
+  color: #FFFFFF;
+  padding: 10px 16px;
+  font-weight: 500;
+  background-color: #9343FF;
+  border: none;
+  max-width: 180px;
+}
+.products__modal .modal__top {
+  padding: 18px 16px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.products__modal .modal__icon {
+  color: #DAFF01;
+}
+.products__modal .modal__text {
+  padding: 16px 16px 32px 16px;
+}
+.products__modal .modal__close {
+  color: #6C757D;
+}
+.products__modal .modal__close:hover {
+  cursor: pointer;
+}
+.products__modal .modal__product {
+  padding: 16px 16px 32px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .products__modal .modal__product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.products__modal .modal__product .product__details {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+.products__modal .modal__product .product__title {
+  font-weight: 700;
+}
+.products__modal .modal__product .product__image {
+  max-width: 100%;
+}
+.products__modal .modal__product .product__description {
+  padding: 24px 0;
+  font-size: 13px;
+  line-height: 20px;
+  border-bottom: 1px solid #000000;
+}
+.products__modal .modal__product .product__price {
+  padding: 24px 0;
+  font-weight: 500;
+  font-size: 20px;
+  display: inline-block;
+}
+.products__modal .modal__product .product__seller {
+  color: #CCCCCC;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #CCCCCC;
+}
 
 .facilities {
   background-color: #000000;
@@ -570,6 +680,9 @@ h2 {
   height: 2.5rem;
   left: 0px;
 }
+.newsletter__form input:focus-visible {
+  outline: none;
+}
 .newsletter__form .send {
   width: 84px;
   position: absolute;
@@ -580,6 +693,48 @@ h2 {
   color: #FFFFFF;
   font-weight: 500;
 }
+.newsletter .invalid-email {
+  position: relative;
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .newsletter .invalid-email {
+    left: 60px;
+  }
+}
+.newsletter__modal {
+  border: none;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .newsletter__modal {
+    width: 700px;
+  }
+}
+.newsletter__modal .modal__top {
+  padding: 18px 16px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.newsletter__modal .modal__icon {
+  color: #DAFF01;
+}
+.newsletter__modal .modal__text {
+  padding: 16px 16px 32px 16px;
+}
+.newsletter__modal .modal__close {
+  color: #6C757D;
+}
+.newsletter__modal .modal__close:hover {
+  cursor: pointer;
+}
 
 .footer {
   background-color: #000000;
@@ -589,135 +744,4 @@ h2 {
 .footer .footer-text {
   font-size: 13px;
   color: #FFFFFF;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal__content {
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-  margin: 0 auto;
-  width: 310px;
-  height: 100%;
-  overflow: auto;
-}
-.modal__content--newsletter {
-  margin: 15% auto;
-  height: auto;
-  background-color: #FFFFFF;
-}
-@media screen and (min-width: 768px) {
-  .modal__content--newsletter {
-    width: 700px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .modal__content {
-    width: 700px;
-    margin: 0 auto;
-  }
-}
-.modal__content .modal__product {
-  padding: 16px 16px 32px 16px;
-}
-@media screen and (min-width: 768px) {
-  .modal__content .modal__product {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.modal__content .modal__product .product__image {
-  width: 100%;
-}
-.modal__content .modal__details {
-  padding: 0 16px;
-}
-.modal__content .modal__details .product__title {
-  margin-top: 24px;
-  font-weight: 700;
-}
-.modal__content .modal__details .product__description {
-  padding: 24px 0px;
-  font-size: 13px;
-  border-bottom: 1px solid #000000;
-}
-.modal__content .modal__details .product__price {
-  display: inline-block;
-  padding: 24px 0px;
-  font-size: 20px;
-  font-weight: 500;
-}
-.modal__content .modal__details .product__seller {
-  font-size: 13px;
-  color: #CCCCCC;
-  padding-bottom: 16px;
-  border-bottom: 1px solid gray;
-}
-.modal__content .modal__details .product__form fieldset {
-  display: flex;
-  margin-top: 16px;
-  justify-content: space-around;
-  border-bottom: 1px solid #CCCCCC;
-  padding-bottom: 16px;
-}
-.modal__content .modal__details .product__form fieldset:nth-child(2) {
-  border: none;
-}
-.modal__content .modal__details .product__form fieldset div {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-}
-.modal__content .modal__details .product__form fieldset input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid #CCCCCC;
-}
-.modal__content .modal__details .product__form fieldset input[type=radio]:checked {
-  border: 4px solid #9343FF;
-}
-.modal__content .modal__details .product__form legend {
-  font-weight: 700;
-  font-size: 13px;
-}
-.modal__content .modal__details .product__form button {
-  padding: 8px 16px;
-  border: none;
-  color: #FFFFFF;
-  background-color: #9343FF;
-}
-.modal__title {
-  padding: 18px 16px;
-  background-color: #000000;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.modal__text {
-  padding: 16px 16px 32px 16px;
-}
-.modal__icon {
-  color: #DAFF01;
-}
-.modal__close {
-  color: #6C757D;
-}
-.modal__close:hover {
-  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
