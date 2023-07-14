@@ -422,11 +422,18 @@ h2 {
 .products__modal {
   padding: 0;
   border: none;
-  max-width: 700px;
+  max-width: 340px;
+}
+@media screen and (min-width: 768px) {
+  .products__modal {
+    max-width: 700px;
+  }
+}
+.products__modal .modal__content {
+  max-width: 100%;
 }
 .products__modal .modal__content form {
   width: 100%;
-  padding: 0 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;

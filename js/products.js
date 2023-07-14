@@ -5,7 +5,13 @@ const productsContainerElement = document.querySelector('.products-container');
 const productModal = document.querySelector('[data-modal-products]')
 const closeProductModal = productModal.querySelector('.modal__close');
 
+
+
 function createProductCard(product) {
+
+    const price = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+        .format(product.price)
+
     const productCard = document.createElement('div');
     const productImage = document.createElement('img');
     const productTitle = document.createElement('h3');
@@ -23,7 +29,7 @@ function createProductCard(product) {
     productDescription.innerText = `${product.description}`;
 
     productPrice.className = 'price';
-    productPrice.innerText = `R$ ${product.price}`;
+    productPrice.innerText = `${price}`;
 
     productButton.className = 'ver-mais';
     productButton.innerText = 'Ver mais'
@@ -56,6 +62,9 @@ function createModalContent(id) {
 
     const product = productsList.find(item => item.id === id);
 
+    const price = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+        .format(product.price)
+
     const contentElement = document.createElement('div');
     const elementModalProduct = document.createElement('div');
     const elementModalImage = document.createElement('div');
@@ -76,7 +85,7 @@ function createModalContent(id) {
                 <h3 class="product__title">${product.name}</h3>
                 <p class="product__description">${product.description}
                 </p>
-                <span class="product__price">R$ ${product.price}</span>
+                <span class="product__price">${price}</span>
                 <p class="product__seller">Vendido e entregue por ${product.seller}</p>`;
 
     buttonAddToCart.innerText = 'Adicionar à sacola'
@@ -147,7 +156,7 @@ closeProductModal.addEventListener('click', () => {
     closeModal()
 })
 
-function closeModal(){
+function closeModal() {
     const node = productModal.querySelector('.modal__content')
     node.parentNode.removeChild(node)
     productModal.close();
