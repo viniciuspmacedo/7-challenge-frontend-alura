@@ -38,7 +38,7 @@ function validateEmail(field) {
 }
 
 window.onclick = function (event) {
-
+    
     if (event.target == document.querySelector("[data-modal-newsletter]")){
         newsletterModal.close()
     }

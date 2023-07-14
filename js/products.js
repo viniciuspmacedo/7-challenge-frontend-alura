@@ -147,13 +147,6 @@ closeProductModal.addEventListener('click', () => {
     closeModal()
 })
 
-window.onclick = function (event) {
-
-    if (event.target == document.querySelector("[data-modal-products]")){
-        closeModal()
-    }
-}
-
 function closeModal(){
     const node = productModal.querySelector('.modal__content')
     node.parentNode.removeChild(node)
