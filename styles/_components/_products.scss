@@ -10,19 +10,19 @@
     margin: 24px;
 
     .products-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-        justify-items: center;
+        padding: 0 auto;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
 
         @include medium-screen {
-            grid-template-columns: repeat(2, 1fr);
+
             column-gap: 30px;
             row-gap: 32px;
         }
 
         @include large-screen {
-            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
@@ -69,7 +69,7 @@
         padding: 0;
         border: none;
         max-width: 340px;
-        
+
         @include medium-screen {
             max-width: 700px;
         }

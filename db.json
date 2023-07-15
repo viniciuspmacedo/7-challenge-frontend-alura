@@ -2,142 +2,249 @@
     "products": [
         {
             "id": 1,
-            "category":"camisetas",
+            "category": "camisetas",
             "name": "Camisa Conforto",
-            "image":[
+            "image": [
                 "./assets/mobile/imagens-cards/card-camiseta.png",
                 "./assets/tablet/imagens-cards/card-camiseta.png",
                 "./assets/desktop/imagens-cards/card-camiseta.png"
-
             ],
             "description": "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
             "price": 70.00,
             "colors": [
-                {"name": "Azul Claro",
-                "color": "#75D7F0"},
-                {"name": "OffWhite",
-                "color": "#F3F6F7"},
-                {"name": "Preto",
-                "color": "#000000"}
+                {
+                    "name": "Azul Claro",
+                    "color": "#75D7F0"
+                },
+                {
+                    "name": "OffWhite",
+                    "color": "#F3F6F7"
+                },
+                {
+                    "name": "Preto",
+                    "color": "#000000"
+                }
             ],
-            "sizes": ["PP", "P", "M", "G", "GG" ],
-            "seller":"Renner"
+            "sizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG"
+            ],
+            "seller": "Renner"
         },
         {
             "id": 2,
-            "category":"calças",
+            "category": "calças",
             "name": "Calça Alfaiataria",
-            "image":[
+            "image": [
                 "./assets/mobile/imagens-cards/card-calca.png",
                 "./assets/tablet/imagens-cards/card-calca.png",
                 "./assets/desktop/imagens-cards/card-calca.png"
-
             ],
             "description": "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
             "price": 180.00,
             "colors": [
-                {"name": "Azul Claro",
-                "color": "#75D7F0"},
-                {"name": "OffWhite",
-                "color": "#F3F6F7"},
-                {"name": "Preto",
-                "color": "#000000"}
+                {
+                    "name": "Azul Claro",
+                    "color": "#75D7F0"
+                },
+                {
+                    "name": "OffWhite",
+                    "color": "#F3F6F7"
+                },
+                {
+                    "name": "Preto",
+                    "color": "#000000"
+                }
             ],
-            "sizes": ["PP", "P", "M", "G", "GG" ],
-            "seller":"Renner"
+            "sizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG"
+            ],
+            "seller": "Renner"
         },
         {
             "id": 3,
-            "category":"calçados",
+            "category": "calçados",
             "name": "Tênis Chunky",
-            "image":[
+            "image": [
                 "./assets/mobile/imagens-cards/card-tenis.png",
                 "./assets/tablet/imagens-cards/card-tenis.png",
                 "./assets/desktop/imagens-cards/card-tenis.png"
-
             ],
             "description": "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
             "price": 250.00,
             "colors": [
-                {"name": "Azul Claro",
-                "color": "#75D7F0"},
-                {"name": "OffWhite",
-                "color": "#F3F6F7"},
-                {"name": "Preto",
-                "color": "#000000"}
+                {
+                    "name": "Azul Claro",
+                    "color": "#75D7F0"
+                },
+                {
+                    "name": "OffWhite",
+                    "color": "#F3F6F7"
+                },
+                {
+                    "name": "Preto",
+                    "color": "#000000"
+                }
             ],
-            "sizes": ["PP", "P", "M", "G", "GG" ],
-            "seller":"Renner"
+            "sizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG"
+            ],
+            "seller": "Renner"
         },
         {
             "id": 4,
-            "category":"casacos",
+            "category": "casacos",
             "name": "Jaqueta Jeans",
-            "image":[
+            "image": [
                 "./assets/mobile/imagens-cards/card-jaqueta.png",
                 "./assets/tablet/imagens-cards/card-jaqueta.png",
                 "./assets/desktop/imagens-cards/card-jaqueta.png"
-
             ],
             "description": "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
             "price": 70.00,
             "colors": [
-                {"name": "Azul Claro",
-                "color": "#75D7F0"},
-                {"name": "OffWhite",
-                "color": "#F3F6F7"},
-                {"name": "Preto",
-                "color": "#000000"}
+                {
+                    "name": "Azul Claro",
+                    "color": "#75D7F0"
+                },
+                {
+                    "name": "OffWhite",
+                    "color": "#F3F6F7"
+                },
+                {
+                    "name": "Preto",
+                    "color": "#000000"
+                }
             ],
-            "sizes": ["PP", "P", "M", "G", "GG" ],
-            "seller":"Renner"
+            "sizes": [
+                "PP",
+                "P",
+                "M",
+                "G",
+                "GG"
+            ],
+            "seller": "Renner"
         },
         {
             "id": 5,
-            "category":"óculos",
+            "category": "óculos",
             "name": "Óculos Redondo",
-            "image":[
+            "image": [
                 "./assets/mobile/imagens-cards/card-oculos.png",
                 "./assets/tablet/imagens-cards/card-oculos.png",
                 "./assets/desktop/imagens-cards/card-oculos.png"
-
             ],
             "description": "Armação metálica em grafite com lentes arredondadas. Sem erro!",
             "price": 120.00,
             "colors": [
-                {"name": "Azul Claro",
-                "color": "#75D7F0"},
-                {"name": "OffWhite",
-                "color": "#F3F6F7"},
-                {"name": "Preto",
-                "color": "#000000"}
+                {
+                    "name": "Azul Claro",
+                    "color": "#75D7F0"
+                },
+                {
+                    "name": "OffWhite",
+                    "color": "#F3F6F7"
+                },
+                {
+                    "name": "Preto",
+                    "color": "#000000"
+                }
             ],
-            "sizes": ["Tamanho único"],
-            "seller":"Renner"
+            "sizes": [
+                "Tamanho único"
+            ],
+            "seller": "Renner"
+        },
+        {
+            "id": 6,
+            "category": "bolsas",
+            "name": "Bolsa coringa",
+            "image": [
+                "./assets/mobile/imagens-cards/card-bolsa.png",
+                "./assets/tablet/imagens-cards/card-bolsa.png",
+                "./assets/desktop/imagens-cards/card-bolsa.png"
+            ],
+            "description": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
+            "price": 120.00,
+            "colors": [
+                {
+                    "name": "Azul Claro",
+                    "color": "#75D7F0"
+                },
+                {
+                    "name": "OffWhite",
+                    "color": "#F3F6F7"
+                },
+                {
+                    "name": "Preto",
+                    "color": "#000000"
+                }
+            ],
+            "sizes": [
+                "Tamanho único"
+            ],
+            "seller": "Renner"
         }
-    ,
-    {
-        "id": 6,
-        "category":"bolsas",
-        "name": "Bolsa coringa",
-        "image":[
-            "./assets/mobile/imagens-cards/card-bolsa.png",
-            "./assets/tablet/imagens-cards/card-bolsa.png",
-            "./assets/desktop/imagens-cards/card-bolsa.png"
-
-        ],
-        "description": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
-        "price": 120.00,
-        "colors": [
-            {"name": "Azul Claro",
-            "color": "#75D7F0"},
-            {"name": "OffWhite",
-            "color": "#F3F6F7"},
-            {"name": "Preto",
-            "color": "#000000"}
-        ],
-        "sizes": ["Tamanho único"],
-        "seller":"Renner"
-    }
+    ],
+    "categories": [
+        {
+            "name": "camisetas",
+            "image": [
+                "./assets/desktop/Categorias/categoria-camiseta.png",
+                "./assets/tablet/Categorias/categoria-camiseta.png",
+                "./assets/mobile/Categorias/categoria-camiseta.png"
+            ]
+        },
+        {
+            "name": "bolsas",
+            "image": [
+                "./assets/desktop/Categorias/categoria-bolsas.png",
+                "./assets/tablet/Categorias/categoria-bolsas.png",
+                "./assets/mobile/Categorias/categoria-bolsas.png"
+            ]
+        },
+        {
+            "name": "calçados",
+            "image": [
+                "./assets/desktop/Categorias/categoria-calcados.png",
+                "./assets/tablet/Categorias/categoria-calcados.png",
+                "./assets/mobile/Categorias/categoria-calcados.png"
+            ]
+        },
+        {
+            "name": "calças",
+            "image": [
+                "./assets/desktop/Categorias/categoria-calcas.png",
+                "./assets/tablet/Categorias/categoria-calcas.png",
+                "./assets/mobile/Categorias/categoria-calcas.png"
+            ]
+        },
+        {
+            "name": "casacos",
+            "image": [
+                "./assets/desktop/Categorias/categoria-calcados.png",
+                "./assets/tablet/Categorias/categoria-calcados.png",
+                "./assets/mobile/Categorias/categoria-calcados.png"
+            ]
+        },
+        {
+            "name": "óculos",
+            "image": [
+                "./assets/desktop/Categorias/categoria-oculos.png",
+                "./assets/tablet/Categorias/categoria-oculos.png",
+                "./assets/mobile/Categorias/categoria-oculos.png"
+            ]
+        }
     ]
 }

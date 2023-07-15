@@ -32,8 +32,8 @@
         </div>
         <div class="form-container">
             <form action="">
-                <input type="text" placeholder="Digite o produto">
-                <button>Buscar</button>
+                <input type="text" placeholder="Digite o produto" data-search-text>
+                <button data-button-search>Buscar</button>
             </form>
         </div>
     </header>
@@ -62,43 +62,47 @@
     <section class="categories">
         <h2>Busque por categoria:</h2>
         <div class="categories-container">
-            <div class="categorie-card">
+            <!-- <div class="category-card">
                 <img class="img-camisetas" src="./assets/mobile/Categorias/categoria-camiseta.png" alt="camiseta">
-                <p>Camiseta</p>
+                <p>Camisetas</p>
             </div>
-            <div class="categorie-card">
+            <div class="category-card">
                 <img class="img-bolsas" src="./assets/mobile/Categorias/categoria-bolsas.png" alt="bolsa">
                 <p>Bolsas</p>
             </div>
-            <div class="categorie-card">
+            <div class="category-card">
                 <img class="img-calcados" src="./assets/mobile/Categorias/categoria-calcados.png" alt="calçados">
                 <p>Calçados</p>
             </div>
-            <div class="categorie-card">
+            <div class="category-card">
                 <img class="img-calcas" src="./assets/mobile/Categorias/categoria-calcas.png" alt="calças">
                 <p>Calças</p>
             </div>
-            <div class="categorie-card">
+            <div class="category-card">
                 <img class="img-casacos" src="./assets/mobile/Categorias/categoria-casacos.png" alt="casacos">
                 <p>Casacos</p>
             </div>
-            <div class="categorie-card">
+            <div class="category-card">
                 <img class="img-oculos" src="./assets/mobile/Categorias/categoria-oculos.png" alt="Óculos">
                 <p>Óculos</p>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <section class="products">
         <h2>Produtos que estão bombando!</h2>
         <div class="products-container">
-            <dialog class="products__modal" data-modal-products>
-                <div class="modal__top">
-                    <span class="material-icons modal__icon">check_circle_outline</span>
-                    <span>Confira detalhes sobre o produto</span>
-                    <span class="material-icons modal__close">close</span>
-                </div>
-            </dialog>
+
+        </div>
+
+        <dialog class="products__modal" data-modal-products>
+            <div class="modal__top">
+                <span class="material-icons modal__icon">check_circle_outline</span>
+                <span>Confira detalhes sobre o produto</span>
+                <span class="material-icons modal__close">close</span>
+            </div>
+        </dialog>
+
     </section>
 
     <section class="facilities">
@@ -154,10 +158,11 @@
         </p>
     </footer>
 
+    <script src="./js/main.js" type="module"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/banner.js"></script>
     <script src="./js/newsletter.js"></script>
-    <script src="./js/products.js" type="module"></script>
+    <script src="./js/search.js" type="module"></script>
 
 
 </body>

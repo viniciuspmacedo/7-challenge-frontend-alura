@@ -1,13 +1,19 @@
-import { api } from "./apiConection.js";
-
-const productsList = await api.apiConection();
-const productsContainerElement = document.querySelector('.products-container');
-const productModal = document.querySelector('[data-modal-products]')
-const closeProductModal = productModal.querySelector('.modal__close');
 
 
 
-function createProductCard(product) {
+function showProducts(listOfProducts, screen, modal) {
+    const productsContainerElement = document.querySelector('.products-container');
+    productsContainerElement.innerHTML = '';
+
+    for (const product of listOfProducts) {
+        productsContainerElement.appendChild(createProductCard(product, screen, listOfProducts, modal));
+    }
+}
+
+function createProductCard(product, screen, listOfProducts, modal) {
+
+    const image = screen < 768 ? product.image[0] :
+        screen < 1440 ? product.image[1] : product.image[2]
 
     const price = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
         .format(product.price)
@@ -19,7 +25,7 @@ function createProductCard(product) {
     const productPrice = document.createElement('span');
     const productButton = document.createElement('button');
 
-    productImage.setAttribute('src', `${product.image[0]}`)
+    productImage.setAttribute('src', `${image}`)
     productImage.setAttribute('alt', `${product.name}`)
 
     productTitle.className = 'title';
@@ -42,25 +48,16 @@ function createProductCard(product) {
     productCard.appendChild(productButton);
 
     productButton.addEventListener('click', () => {
-
-        productModal.appendChild(createModalContent(product.id));
-        productModal.showModal();
+        modal.appendChild(createModalContent(listOfProducts, product.id));
+        modal.showModal();
     })
 
-    return productCard
+    return productCard;
 }
 
-function showProducts(listOfProducts) {
-    for (const product of listOfProducts) {
-        productsContainerElement.appendChild(createProductCard(product))
-    }
-}
+function createModalContent(listOfProducts, id) {
 
-
-
-function createModalContent(id) {
-
-    const product = productsList.find(item => item.id === id);
+    const product = listOfProducts.find(item => item.id === id);
 
     const price = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
         .format(product.price)
@@ -103,7 +100,6 @@ function createModalContent(id) {
     return contentElement
 
 }
-
 
 function createSizesMenu(product) {
     const sizes = product.sizes
@@ -150,14 +146,13 @@ function createColorsMenu(product) {
     return fieldset
 }
 
-showProducts(productsList)
-
-closeProductModal.addEventListener('click', () => {
-    closeModal()
-})
-
-function closeModal() {
-    const node = productModal.querySelector('.modal__content')
+function closeProdctModal(modal) {
+    const node = modal.querySelector('.modal__content')
     node.parentNode.removeChild(node)
-    productModal.close();
+    modal.close();
+}
+
+export const products = {
+    showProducts,
+    closeProdctModal
 }
