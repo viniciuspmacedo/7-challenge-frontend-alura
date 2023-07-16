@@ -37,9 +37,3 @@ function validateEmail(field) {
     return (email.length < 5 || !isEmailValid)
 }
 
-window.onclick = function (event) {
-    
-    if (event.target == document.querySelector("[data-modal-newsletter]")){
-        newsletterModal.close()
-    }
-}

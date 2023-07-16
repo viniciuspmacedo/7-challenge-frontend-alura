@@ -33,6 +33,12 @@
         .category-card {
             width: 146px;
 
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all ease-in-out 0.3s;
+            }
+
             @include medium-screen {
                 width: 210px;
             }

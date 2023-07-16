@@ -6,9 +6,76 @@
     overflow: hidden;
 
     .slide {
-        text-align: center;
+
         width: 100%;
         display: none;
+        color: $white;
+        position: relative;
+        text-align: center;
+
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+            height: 30px;
+            margin-bottom: 16px;
+            padding: 16px;
+
+
+
+            @include large-screen {
+                font-size: 48px;
+
+            }
+        }
+
+        p {
+            font-size: 16px;
+            padding: 16px 24px;
+
+            @include medium-screen {
+                padding: 0;
+            }
+
+            @include large-screen {
+                font-size: 20px;
+
+            }
+        }
+
+        &__caption {
+
+            &--left {
+                position: absolute;
+                top: 55%;
+
+                @include medium-screen {
+                    left: 40%;
+                    top: 45%;
+
+                    p {
+                        text-align: right;
+                    }
+                }
+
+                @include large-screen {
+                    left: 55%;
+                }
+            }
+
+            &--right {
+                position: absolute;
+                top: 55%;
+
+                @include medium-screen {
+                    right: 40%;
+                    top: 45%;
+                }
+
+                @include large-screen {
+                    right: 55%;
+                }
+            }
+        }
     }
 
     #banner-img-1 {
@@ -63,8 +130,9 @@
             color: $white;
             font-size: 72px;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
+                transform: scale(1.08);
             }
         }
     }
@@ -73,7 +141,12 @@
         z-index: 1;
         position: absolute;
         bottom: 10px;
-        left: calc(50% - 90px); 
+        left: calc(50% - 90px);
+        display: none;
+
+        @include medium-screen{
+            display: block;
+        }
 
         .indicator {
             display: inline-block;
@@ -82,11 +155,11 @@
             background-color: gray;
             margin: 0 5px;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
 
-            &.active{
+            &.active {
                 background-color: $white
             }
         }

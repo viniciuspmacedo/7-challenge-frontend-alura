@@ -167,9 +167,70 @@ h2 {
   overflow: hidden;
 }
 .banner .slide {
-  text-align: center;
   width: 100%;
   display: none;
+  color: #FFFFFF;
+  position: relative;
+  text-align: center;
+}
+.banner .slide h2 {
+  font-size: 32px;
+  font-weight: 500;
+  height: 30px;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .banner .slide h2 {
+    font-size: 48px;
+  }
+}
+.banner .slide p {
+  font-size: 16px;
+  padding: 16px 24px;
+}
+@media screen and (min-width: 768px) {
+  .banner .slide p {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .banner .slide p {
+    font-size: 20px;
+  }
+}
+.banner .slide__caption--left {
+  position: absolute;
+  top: 55%;
+}
+@media screen and (min-width: 768px) {
+  .banner .slide__caption--left {
+    left: 40%;
+    top: 45%;
+  }
+  .banner .slide__caption--left p {
+    text-align: right;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .banner .slide__caption--left {
+    left: 55%;
+  }
+}
+.banner .slide__caption--right {
+  position: absolute;
+  top: 55%;
+}
+@media screen and (min-width: 768px) {
+  .banner .slide__caption--right {
+    right: 40%;
+    top: 45%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .banner .slide__caption--right {
+    right: 55%;
+  }
 }
 .banner #banner-img-1 {
   width: 100%;
@@ -225,12 +286,19 @@ h2 {
 }
 .banner .carousel-controls span:hover {
   cursor: pointer;
+  transform: scale(1.08);
 }
 .banner .carousel-indicators {
   z-index: 1;
   position: absolute;
   bottom: 10px;
   left: calc(50% - 90px);
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .banner .carousel-indicators {
+    display: block;
+  }
 }
 .banner .carousel-indicators .indicator {
   display: inline-block;
@@ -279,6 +347,11 @@ h2 {
 }
 .categories .categories-container .category-card {
   width: 146px;
+}
+.categories .categories-container .category-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
 }
 @media screen and (min-width: 768px) {
   .categories .categories-container .category-card {
@@ -422,6 +495,9 @@ h2 {
   padding: 0;
   border: none;
   max-width: 340px;
+}
+.products__modal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
 }
 @media screen and (min-width: 768px) {
   .products__modal {
