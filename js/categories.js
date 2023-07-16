@@ -29,6 +29,7 @@ function createCategoryCard(category, showProducts, screen, modal) {
     categoryCard.addEventListener('click', async () => {
         const result = await searchByCategory(name);
         showProducts(result, screen, modal);
+        window.location.href = "#products"
     })
     
     return categoryCard;

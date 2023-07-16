@@ -22,8 +22,17 @@ iconCloseProductModal.addEventListener('click', () => {
 
 buttonSearch.addEventListener('click', async (e) => {
     e.preventDefault();
-    const result = await search.searchProduct(searchText.value)
-    products.showProducts(result, screen, productModal)
+    if (searchText.value.length != 0) {
+        let result = await search.searchProduct(searchText.value)
+
+        if (result.length == 0) {
+            result = undefined;
+        }
+        products.showProducts(result, screen, productModal)
+
+        window.location.href = "#products"
+    }
+
 })
 
 window.addEventListener('resize', () => {
@@ -39,3 +48,4 @@ window.addEventListener('click', (e) => {
         products.closeProdctModal(productModal)
     }
 })
+

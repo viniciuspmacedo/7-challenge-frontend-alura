@@ -47,6 +47,11 @@
                         text-decoration: none;
                         color: $white;
                     }
+
+                    &:hover{
+                        transform: scale(1.05);
+                        transition: all ease-in 0.5s;
+                    }
                 }
             }
 

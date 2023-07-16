@@ -75,6 +75,10 @@ h2 {
   text-decoration: none;
   color: #FFFFFF;
 }
+.header .header-container #menu ul li:hover {
+  transform: scale(1.05);
+  transition: all ease-in 0.5s;
+}
 @media screen and (min-width: 768px) {
   .header .header-container #menu {
     display: block;
@@ -178,7 +182,11 @@ h2 {
   font-weight: 500;
   height: 30px;
   margin-bottom: 16px;
-  padding: 16px;
+}
+@media screen and (min-width: 768px) {
+  .banner .slide h2 {
+    text-align: right;
+  }
 }
 @media screen and (min-width: 1440px) {
   .banner .slide h2 {
@@ -205,8 +213,8 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .banner .slide__caption--left {
-    left: 40%;
-    top: 45%;
+    left: 45%;
+    top: 40%;
   }
   .banner .slide__caption--left p {
     text-align: right;
@@ -223,8 +231,11 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .banner .slide__caption--right {
-    right: 40%;
-    top: 45%;
+    right: 45%;
+    top: 40%;
+  }
+  .banner .slide__caption--right p {
+    text-align: left;
   }
 }
 @media screen and (min-width: 1440px) {

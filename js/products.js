@@ -1,12 +1,15 @@
-
-
-
 function showProducts(listOfProducts, screen, modal) {
     const productsContainerElement = document.querySelector('.products-container');
     productsContainerElement.innerHTML = '';
 
-    for (const product of listOfProducts) {
-        productsContainerElement.appendChild(createProductCard(product, screen, listOfProducts, modal));
+    try {
+
+        for (const product of listOfProducts) {
+            productsContainerElement.appendChild(createProductCard(product, screen, listOfProducts, modal));
+        }
+
+    } catch(e){
+        productsContainerElement.innerHTML += `<div>Nenhum produto foi encontrado</div>`
     }
 }
 

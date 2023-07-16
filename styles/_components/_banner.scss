@@ -18,9 +18,10 @@
             font-weight: 500;
             height: 30px;
             margin-bottom: 16px;
-            padding: 16px;
-
-
+            
+            @include medium-screen{
+                text-align: right;
+            }
 
             @include large-screen {
                 font-size: 48px;
@@ -49,8 +50,8 @@
                 top: 55%;
 
                 @include medium-screen {
-                    left: 40%;
-                    top: 45%;
+                    left: 45%;
+                    top: 40%;
 
                     p {
                         text-align: right;
@@ -67,8 +68,12 @@
                 top: 55%;
 
                 @include medium-screen {
-                    right: 40%;
-                    top: 45%;
+                    right: 45%;
+                    top: 40%;
+
+                    p {
+                        text-align: left;
+                    }
                 }
 
                 @include large-screen {
