@@ -169,6 +169,7 @@ h2 {
   position: relative;
   width: 100%;
   overflow: hidden;
+  max-height: 500px;
 }
 .banner .slide {
   width: 100%;
